@@ -59,8 +59,14 @@
                     @include('frontend.inc.customer_side_nav')
                 </div>
                 <div class="col-lg-9">
+                    <div class="card-dashboard">
+                        <div class="img-bg-dashboard">
+                            <img clas="img-bg-profil" style="width:50px; height:50px;" src="{{asset('frontend/images/bgprofil.jpg')}}" alt="">
+                        
+                        </div>
+                    </div>
                     <div class="text-center rounded mb-5" style="overflow: hidden;">
-                        <div style="background-color: #F3795C;">
+                        <div style="background-color: #FFAAA5;">
                             <h1 class="py-3 mb-0 font-weight-bold heading heading-3" style="color: white;">Hi, {{ Auth::user()->name }} {{ Auth::user()->last_name }}</h1>
                         </div>
                         <div class="py-4" style="background-color: white;">
@@ -72,7 +78,7 @@
                                 </div>
                             
                                 <div class="col-6">
-                                    <div class="progress" style="background-color: #FCE6E0;">
+                                    <div class="progress" style="background-color: #FFAAA5;">
                                         <div class="progress-bar" role="progressbar" style="width: {{$to_next > 0? $percent:'100'}}%; background-color: #F3795C;" aria-valuenow="{{$to_next > 0? $percent:'100'}}" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </div>
@@ -88,7 +94,7 @@
                             <p class="font-weight-bold mb-0" style="font-size: 10px;">Luar biasa! anda sudah mencapai level <span style="text-transform: capitalize;">maximum</span></p>
                             @endif
                         </div>
-                        <div class="py-2" style="background-color: #F9C0B0;">
+                        <div class="py-2" style="background-color: #FFAAA5;">
                             <p class="mb-0" style="font-size: 11px; line-height: 1rem;">Selamat datang di Happy Skin Reward! Level membership kamu berada di tingkat Dewy Skin.</p>
                             <p class="mb-0" style="font-size: 11px; line-height: 1rem;">Yuk, belanja dan kumpulkan poin lebih banyak untuk ke tingkat Oh Happy Skin! Cari tau berbagai reward menarik di <a href="#" style="color: white;"><u>Keuntungan Happy Skin Reward.</u></a></p>
                         </div>

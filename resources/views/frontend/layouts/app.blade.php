@@ -99,6 +99,45 @@
 <!-- dropify -->
 <link href="{{ asset('plugins/dropify/dist/css/dropify.min.css')}}" rel="stylesheet">
 <style>
+*ARJU*/
+
+/*Dashboard-My-Account*/
+.card-dashboard{
+  box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  height:20%;
+  margin-bottom:20px;
+  border-radius: 0px 0px 100px 0px;
+}
+
+.card-dasboard:hover {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.img-bg-profil {
+  border-radius: 50%;
+
+}
+
+.container {
+  padding: 2px 16px;
+}
+.img-bg-dashboard{
+    width: 100%;
+    height: 50%;
+    border-radius: 2px 2px 0 0;
+    background-image: url('{{asset('frontend/images/bgprofil.jpg')}}')
+}
+
+.foto-profil{
+height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+/*--END--*/
     @font-face { 
         font-family: brandon;
         font-weight: 500;

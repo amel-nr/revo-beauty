@@ -64,17 +64,17 @@
                 <p><a href="{{ route('consultation') }}" style="color: black; font-size: 14px;">Konsultasi</a></p>
             </div>
             <div class="col">
-                <p class="heading-6" style="color: #FFAAA5; font-weight: 700;">REVO SQUAD</p>
+                <p class="heading-6" style="color: #FFAAA5; font-weight: 700;">PHOEBE'S SQUAD</p>
                 <p style="border-bottom: 2px solid #8675A9; width: 30px;"></p>
                 <p><a href="{{ route('dashboard') }}" style="color: black; font-size: 14px;">My Account</a></p>
                 <p><a href="{{ route('happy_skin') }}" style="color: black; font-size: 14px;">Happy Skin Reward</a></p>
                 <a href="{{ route('forum') }}"><img src="{{ asset('frontend/images/forum.png') }}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="" style="height: 24px;"></a>
             </div>
             <div class="col-md-5 col-12">
-                <p class="heading-6" style="color: #8675A9; font-weight: 700; font-size: 14px;">Promo Eksklusif & Diskon 10%</p>
+                <p class="heading-6" style="color: black; font-weight: 700; font-size: 14px;">Promo Eksklusif & Diskon 10%</p>
                 <div class="form-group">
-                  <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Email" style="background-color: #ffffff; font-size: 12px; width: 70%; display: inline; border-color: #FFAAA5;">
-                  <button type="button" class="btn btn-primary" style="font-size: 12px; background-color: #ffffff; color: #7B7B7B; border-color: #FFAAA5; width: 25%;">enter</button>
+                  <input type="email" class="form-control" name="" id="" aria-describedby="emailHelpId" placeholder="Email" style="background-color: #FCF8F0; font-size: 12px; width: 70%; display: inline;">
+                  <button type="button" class="btn btn-primary" style="font-size: 12px; background-color: #FCF8F0; color: #939598; border-color: #ddd; width: 25%;">enter</button>
                   <p style="color: black; font-size: 9px; line-height: 14px; margin-top: 5px;">Daftarkan email aktifmu untuk mendapat informasi promo di Ponny Beaute. <br> Dapatkan juga kode promo eksklusif hanya untuk kamu dan diskon 10% untuk pembelian pertamamu.</p>
                 </div>
                 <p class="heading-6" style="color: black; font-weight: 700; margin-top: 30px;">PILIHAN PEMBAYARAN</p>
