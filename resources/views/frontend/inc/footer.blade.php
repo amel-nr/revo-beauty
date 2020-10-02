@@ -64,7 +64,7 @@
                 <p><a href="{{ route('consultation') }}" style="color: black; font-size: 14px;">Konsultasi</a></p>
             </div>
             <div class="col">
-                <p class="heading-6" style="color: #FFAAA5; font-weight: 700;">PHOEBE'S SQUAD</p>
+                <p class="heading-6" style="color: #FFAAA5; font-weight: 700;">REVO </p>
                 <p style="border-bottom: 2px solid #8675A9; width: 30px;"></p>
                 <p><a href="{{ route('dashboard') }}" style="color: black; font-size: 14px;">My Account</a></p>
                 <p><a href="{{ route('happy_skin') }}" style="color: black; font-size: 14px;">Happy Skin Reward</a></p>
