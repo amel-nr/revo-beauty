@@ -1041,7 +1041,7 @@ section.home-banner-area {
 .category-accordion .category-name:after {
     content: "";
     position: absolute;
-    background: #777;
+    background: #000;
     transition: 150ms all ease-out;
     top: calc(50% - 1px);
     left: 0px;
