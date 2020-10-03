@@ -38,7 +38,7 @@
                                         <img src="{{ asset('frontend/images/blog/icon-profil.png') }}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|} text-right" alt="" style="height: 40px;">
                                     </div>
                                     <div class="col-9 text-left pr-5 pl-0" style="font-size: 14px; font-weight: 600;">
-                                        <p class="">{{$b['user']['name']}} <br> {{date('d F Y', strtotime($b['created_at'])) }}</p>
+                                      {{--  <p class="">{{$b['user']['name']}} <br> {{date('d F Y', strtotime($b['created_at'])) }}</p> --}}
                                     </div>
                                 </div>
                             </div>
@@ -54,9 +54,30 @@
             @endif
         </div>
     </div>
-        <div class="text-center py-5">
-            <a name="" id="otherbtn" class="btn btn-danger btn-spinner rounded" style="font-size: 16px;" href="#" role="button">TAMPILKAN SEMUA</a>
+        <div class="container pb-lg-5 pb-3">
+            <div class="row">
+                <div class="col-12">
+                    <nav aria-label="..." class="mt-2 mt-lg-5">
+                        <ul class="pagination">
+                            <li class="page-item mx-1"> <a class="page-link" style="border-radius: 100%;" href="#" tabindex="-1"
+                                    aria-disabled="true"><i class="fa fa-chevron-left"></i></a>
+                            </li>
+                            <li class="page-item mx-1"><a class="page-link" style="border-radius: 100%;" href="#">1</a></li>
+                            <li class="page-item active mx-1" aria-current="page">
+                                <a class="page-link mx-1" style="border-radius: 100%;" href="#">2 <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item mx-1"><a class="page-link" style="border-radius: 100%;" href="#">3</a></li>
+                            <li class="page-item mx-1">
+                                <a class="page-link" style="border-radius: 100%;" href="#"><i
+                                        class="fa fa-chevron-right"></i></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
+      
 </div>
 </section>
 
@@ -82,8 +103,8 @@ $(document).ready(function () {
     function select() {
         $(".text-blog-filter").css("color", "black");
         $("#filter-all").find('p').css("color", "#f3795c");
-        $(".blog-filter").css("border-bottom", "none");
-        $("#filter-all").css("border-bottom", "3px solid #f3795c");
+        $(".blog-filter").css("background-color", "none");
+        $("#filter-all").css("background-color", "3px solid #f3795c");
     }
 
 
@@ -133,7 +154,13 @@ function all(id = 0,all=0) {
                             let dblog = "{{route('artikel',['id' => 'bid'])}}".replace('bid',blog.id)
                             if (blog.showblog == 1) {
                                 content +=`
-                                    <div id="item" class="col-md-4 col-12 mb-5"> <div class="py-2" style="background-color: #f3795c; height: 40px; border-radius: 6px 6px 0 0; width: 50%;"> <p style="color: white; font-size: 14px;" class="text-center" id="title-category" data-id="`+blog.category_id+`">`+ blog.category.title.toUpperCase() +`</p> </div> <div class="content-blog"> <a href="`+dblog+`"> <img src=" {{asset('blog/thumbnail/')}}/`+blog.thumbnail+` " class="img-fluid" alt=""> <div class="blog-hover"> <div class="p-blog text-center"> <p>CLICK ME</p> </div> </div> </a> </div> <p class="mt-2" style="font-weight: 600; font-size: 18px; line-height: 24px;">`+ blog.title +`</p> </div>
+                                    <div id="item" class="col-md-4 col-12 mb-5">
+                                        <div class="py-2" style="background-color: #f3795c; height: 40px; border-radius: 6px 6px 0 0; width: 50%;">
+                                            <p style="color: white; font-size: 14px;" class="text-center" id="title-category" data-id="`+blog.category_id+`">`+ blog.category.title.toUpperCase() +`</p>
+                                            </div> <div class="content-blog"> <a href="`+dblog+`">
+                                                <img src=" {{asset('blog/thumbnail/')}}/`+blog.thumbnail+` " class="img-fluid" alt=""> <div class="blog-hover">
+                                                    <div class="p-blog text-center">
+                                                <p>CLICK ME</p> </div> </div> </a> </div> <p class="mt-2" style="font-weight: 600; font-size: 18px; line-height: 24px;">`+ blog.title +`</p></div>
                                 `}
                     })
                         $("#data").html(content)

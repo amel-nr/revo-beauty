@@ -2,14 +2,23 @@
 
 @section('content')
 
-@include('frontend.inc.blog_header')
 <div class="row mb-3"><a href="#" class="center-block" id="back" style="margin:auto;display:none"><i class="fa fa-backward"></i></a></div>
 <div id="data" class="row pt-5 mx-0">
 </div>
 
 <div id="dblog">
-        <div>
-            <h1 class="text-center pt-5 font-weight-bold blog-title-mobile">{{$blog->title}}<h1>
+        <div class="container pt-5 font-weight-bold">
+            <div class="row">
+                <div class="d-flex align-items-center">
+                    <div>
+                        <h3><i class="fa fa-chevron-left"></i></h3>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="blog-title-mobile"> {{$blog->title}}</h3>
+                    </div>
+                </div>
+                
+            </div>
         </div>
         <!-- <div class="row pt-3">
             <div class="col-10 mx-auto">
@@ -17,7 +26,7 @@
             </div>
         </div> -->
         <div class="row">
-            <img src="{{asset('/blog/thumbnail/'.$blog->thumbnail)}}" style="margin-top:50px;margin-left: auto;margin-right: auto;width: 70%;" alt="">
+            <img src="{{asset('/blog/thumbnail/'.$blog->thumbnail)}}" style="margin-top:50px;margin-left: auto;margin-right: auto;width: 100%;" alt="">
             <div class="col-10 mx-auto pt-3" style="font-weight: 600;">
                 <p style="font-size: 14px; text-align: justify;">{!! $blog->content !!}</p>
             </div>
