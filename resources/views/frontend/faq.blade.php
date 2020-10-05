@@ -30,15 +30,18 @@
     <div class="container py-4" style="position: relative;">
         @php($banner = \App\Banner::where("url","#faq")->first())
         <img src="{{ isset($banner->photo) ? asset($banner->photo) : asset('frontend/images/placeholder-rect.jpg') }}" class="w-100 img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
-        <div class="text-center faq-container" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-            <h1 class="font-weight-bold">FAQ</h1>
-            <h4 class="font-weight-bold">FREQUENT ASKED QUESTIONS</h4>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <h1 class="font-weight-bold text-center">FAQ</h1>
+            
+            </div>
         </div>
     </div>
     <div class="container pb-4">
     @php($cfaqs = \App\faqCategory::with("faq")->get())
     @foreach($cfaqs as $key => $cfaq)
-        <h3 class="pt-4 font-weight-bold">{{strtoupper($cfaq->title)}}</h3>
+       
         <div class="accordion md-accordion pt-3" id="accordionEx{{$key}}" role="tablist" aria-multiselectable="true">
         @foreach($cfaq->faq as $k => $faq)
             <div class="card" style="background-color: #fcf8F0; border: none; border-bottom: #f3795c solid 1px;">

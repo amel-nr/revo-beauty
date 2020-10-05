@@ -87,6 +87,7 @@
 <!-- color theme -->
 <link href="{{ asset('frontend/css/colors/'.\App\GeneralSetting::first()->frontend_color.'.css')}}" rel="stylesheet" media="all">
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
 <!-- Custom style -->
 <link type="text/css" href="{{ asset('frontend/css/custom-style.css') }}" rel="stylesheet" media="all">
 <link rel="stylesheet" type="text/css" href="{{ asset('plugins/ratting-rp/jsRapStar.css') }}">
@@ -1841,6 +1842,8 @@
     </div>
         
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 
 <!-- Core -->
 <script src="{{ asset('frontend/js/vendor/popper.min.js') }}"></script>
@@ -1851,6 +1854,7 @@
 <script src="{{ asset('frontend/js/select2.min.js') }}"></script>
 <script src="{{ asset('frontend/js/nouislider.min.js') }}"></script>
 
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
 
 <script src="{{ asset('frontend/js/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('frontend/js/slick.min.js') }}"></script>
