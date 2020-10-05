@@ -87,6 +87,7 @@
 <!-- color theme -->
 <link href="{{ asset('frontend/css/colors/'.\App\GeneralSetting::first()->frontend_color.'.css')}}" rel="stylesheet" media="all">
 <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+
 <!-- Custom style -->
 <link type="text/css" href="{{ asset('frontend/css/custom-style.css') }}" rel="stylesheet" media="all">
 <link rel="stylesheet" type="text/css" href="{{ asset('plugins/ratting-rp/jsRapStar.css') }}">
@@ -246,15 +247,11 @@
     }
 
     .addtobag {
-        background-color: #FFC5B9;
-        color: white;
-        font-weight: 700;
+        background-color: #F3795C;
     }
 
     .quickview {
-        background-color: #EFBBCF;
-        color: white;
-        font-weight: 700;
+        background-color: black;
     }
 
     .lihatlebihbanyak {
@@ -820,6 +817,100 @@
         margin-right: 0;
         margin-left: 0.625rem;
     }
+    /*ARJU*/
+    /*dashboard customers*/
+    .card-profil-dashboard{
+    /*position:absolute;*/
+    width:100%;
+    height:15%;
+    border-radius: 5px 5px 100px 5px;
+    margin-bottom:20px
+    }
+    .card-profil-dashboard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+
+    .img-card-profil {
+    border-radius: 5px 5px 0 0;
+    width:100%;
+    height:100%;
+    }
+    .profil-logo {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-left:50px;
+    margin-top:-50px;
+    border: 5px solid #fff;
+    background-color:antiquewhite;
+
+    }
+    .foto-profil{
+    height: 100%;
+    width: 100%;
+    text-align:center;
+    border-radius: 50%;
+
+    }
+    .bg-card-profil{
+        width:100%;
+        height:50%;
+    }
+    .btn-membership{
+        width:100px;
+        height:30px;
+        background-color:#FFAAA5;
+        color:#fff;
+        border-radius:20px 20px 20px 20px;
+    }
+    .text-name-profil{
+        font-size:28px !important;
+        font-weight:bold;
+    }
+    
+
+    /*Side-Bar-Customers*/
+    .widget-profile-side{
+        background-color:#fff;
+    }
+    @font-face { 
+        font-family: niramit_regular;
+        font-weight: 500;
+        font-style: normal;
+        src: url('{{ asset('fonts/Niramit-Regular.ttf') }}');
+    }
+
+    @font-face { 
+        font-family: niramit_medium;
+        font-weight: 600;
+        font-style: normal;
+        src: url('{{ asset('fonts/Niramit-Medium.ttf') }}');
+    }
+
+    @font-face { 
+        font-family: niramit_bold;
+        font-weight: 700;
+        font-style: normal;
+        src: url('{{ asset('fonts/Niramit-Bold.ttf') }}');
+    }
+
+    @font-face { 
+        font-family: niramit_italic;
+        font-weight: 500;
+        font-style: normal;
+        src: url('{{ asset('fonts/Niramit-Italic.ttf') }}');
+    }
+    .font-head-dashboard{
+        font-family: niramit_bold;
+        font-size:24px;
+    }
+    .font-dashboard{
+        font-family: niramit_regular;
+        font-size:16px;
+        font-weight:normal;
+    }
+
+    /*END*/
 </style>
 
 @yield('style')
@@ -1756,6 +1847,8 @@
     </div>
         
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 
 <!-- Core -->
 <script src="{{ asset('frontend/js/vendor/popper.min.js') }}"></script>
@@ -1766,6 +1859,7 @@
 <script src="{{ asset('frontend/js/select2.min.js') }}"></script>
 <script src="{{ asset('frontend/js/nouislider.min.js') }}"></script>
 
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
 
 <script src="{{ asset('frontend/js/sweetalert2.min.js') }}"></script>
 <script src="{{ asset('frontend/js/slick.min.js') }}"></script>
@@ -3192,8 +3286,8 @@ $("#thumb").dropify({
 
     function addToBag(id,vw=null) {
         if (checkAddToCartValidity()) {
-            // $('#addToBag').modal();
-            // $('.c-preloader').show();
+            $('#addToBag').modal();
+            $('.c-preloader').show();
             if (vw!="vw") {
                 $('#addToBag').modal();
                 $('.c-preloader').show();
