@@ -135,7 +135,12 @@
     * {
         font-family: brandon, "Open Sans", sans-serif;
     }
-
+    .lingkaran {
+        display: inline-block;
+        background-size: 41px 41px;
+        width: 41px;
+        height: 41px;
+    }
     .btn {
         font-family: brandon, "Open Sans", sans-serif !important;
     }
@@ -150,7 +155,7 @@
 
     .top-navbar{
         transition: background-color .3s;
-        background-color: #FEF6E8;
+        background-color: #fff;
         position: relative;
         width: 100%;
     }
@@ -159,7 +164,7 @@
         position: fixed !important;
         top: 0;
         width: 100%;
-        background-color: #FEF6E8; 
+        background-color: #ffffff; 
     }
 
     #mobile-nav{
@@ -351,8 +356,8 @@
 
     .btn-pilih:focus {
         color: white !important;
-        background-color: #F3795C !important;
-        border-color: #F3795C !important;
+        background-color: #FFAAA5 !important;
+        border-color: #FFAAA5 !important;
     }
 
     .list-group-item {
@@ -360,12 +365,12 @@
     }
 
     .list-group-item:hover {
-        color: #F3795C;
+        color: #FFAAA5;
     }
 
     .btn-keluar, .btn-mskkeranjang, .btn-lihatlebihbanyak, .btn-pakai {
-        background-color: #F3795C;
-        border-color: #F3795C !important;
+        background-color: #FFAAA5;
+        border-color: #FFAAA5 !important;
         border-radius: 5px;
         color: white !important;
     }
@@ -398,8 +403,8 @@
 
     .btn-keluar:hover, .btn-mskkeranjang:hover, .btn-lihatlebihbanyak:hover, .btn-pakai:hover {
         color: white !important;
-        background-color: #f25735 !important;
-        border-color: #f25735 !important;
+        background-color: #FE9993 !important;
+        border-color: #FE9993 !important;
     }
 
     .btn-keluar:focus, .btn-mskkeranjang:focus, .btn-lihatlebihbanyak:focus, .btn-pakai:focus, .btn-komplain:focus {

@@ -27,7 +27,7 @@ foreach (Session::get('cart') as $key => $value){
     // }
 
     @endphp
-    <div class="row mt-3 py-2" style="border-bottom: 1px solid #F3795C;">
+    <div class="row mt-3 py-2" style="border-bottom: 1px solid #D1D1D1;">
         <div class="col-3">
             <img src="{{ isset($product->thumbnail_img) ? asset($product->thumbnail_img) : asset('frontend/images/placeholder.jpg') }}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
         </div>
@@ -45,15 +45,15 @@ foreach (Session::get('cart') as $key => $value){
                     <s>{{ home_base_price($product->id) }}</s>
                     @if($flash_product)
                         @if($flash_product->discount_type == 'percent')
-                            <span style="color: #F3795C;"> {{ __($flash_product->discount) }}%</span>
+                            <span style="color: #FFAAA5;"> {{ __($flash_product->discount) }}%</span>
                         @elseif($flash_product->discount_type == 'amount')
-                            <span style="color: #F3795C;"> Potongan Rp {{ __($flash_product->discount) }}</span>
+                            <span style="color: #FFAAA5;"> Potongan Rp {{ __($flash_product->discount) }}</span>
                         @endif
                     @else
                         @if($product->discount_type == 'percent')
-                            <span style="color: #F3795C;"> {{ __($product->discount) }}%</span>
+                            <span style="color: #FFAAA5;"> {{ __($product->discount) }}%</span>
                         @elseif($product->discount_type == 'amount')
-                            <span style="color: #F3795C;"> Potongan Rp {{ __($product->discount) }}</span>
+                            <span style="color: #FFAAA5;"> Potongan Rp {{ __($product->discount) }}</span>
                         @endif
                     @endif
                 </p>
@@ -75,7 +75,7 @@ foreach (Session::get('cart') as $key => $value){
                     </span>
                 </div>
             @endif
-            <a href="#" onclick="removeFromCartView(event, {{ $key }});" type="button"><i class="fa fa-trash-o mt-3" aria-hidden="true" style="font-size: 18px; color: #F3795C;"></i></a>
+            <a href="#" onclick="removeFromCartView(event, {{ $key }});" type="button"><i class="fa fa-trash-o mt-3" aria-hidden="true" style="font-size: 18px; color: #FFAAA5;"></i></a>
         </div>
     </div>
 
@@ -105,7 +105,7 @@ foreach (Session::get('cart') as $key => $value){
     @endphp
 @endforeach
 <p class="mb-0 mt-3" style="font-weight: 700; font-size: 14px;">TOTAL : {{ single_price($subtotal) }}</p>
-<a href="{{ route('cart') }}" type="button" class="btn btn-danger text-center btn-keluar" style="margin-top: 20px;">CHECKOUT</a>
+<a href="{{ route('cart') }}" type="button" class="btn btn-danger text-center btn-keluar" style="margin-top: 20px; background-color: #FFAAA5; border-color: #FFAAA5;">CHECKOUT</a>
 <script type="text/javascript">
     cartQuantityInitialize();
 </script>

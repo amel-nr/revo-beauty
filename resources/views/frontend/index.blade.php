@@ -217,7 +217,7 @@
         </div>
         @endif--}}
         
-        <div style="background-color: #FADFD2; position: relative; padding: 50px 0;">
+        <div style="background-color: #F6E5F5; position: relative; padding: 50px 0;">
             <p class="mb-0 heading-1" style="text-align: center; position: absolute; width: 100%; top: -10px; font-weight: 700; color: #F3795C;">DIARY PHOEBE.</p>
             <div class="container">
                 <div class="row">

@@ -1,15 +1,14 @@
 @extends('frontend.layouts.app')
 
 @section('content')   
-    <section class="py-4 gry-bg" id="" style="background-color: #FCF8F0;">
+    <section class="py-4 gry-bg" id="" style="background-color: #fff;">
         @if(Session::has('cart') && count(Session::get('cart')) > 0)
         <div class="container" id="cart-summary">
-            <h1 class="h5 font-weight-bold">KERANJANG BELANJA</h1>
+            <h1 class="h5 font-weight-bold text-center">KERANJANG BELANJA</h1>
             <div class="row">
                 <div class="col-md-8 col-12">
-                    <div class="row text-center rounded m-0" style="border: 1px solid #F3795C;">
-                        <div class="col-6 py-2 sample-area" style="border-right: 1px solid #F3795C;">
-                            <p class="m-0 font-weight-bold" style="font-size: 11px;">Dapatkan 2 sampel gratis disetiap pembelian</p>
+                    <div class="row text-center rounded m-0" style="border: 1px solid #FFAAA5;">
+                        <div class="col-6 py-2 sample-area" style="border-right: 1px solid #FFAAA5;">
                             <p class="m-0 font-weight-bold sample-btn sample-area" style="cursor: pointer;">PILIH SAMPEL YANG KAMU INGINKAN <i class="fa fa-chevron-down sample-arrow" aria-hidden="true" style="color: #F3795C; font-size: 14px;"></i></p>
                         </div>
                         <div class="col-6 py-2 tukarpoin-area">
@@ -36,13 +35,13 @@
                             @endif
                         </div>
                     </div>
-                    <div class="container p-4 sample-container" style="border: 1px solid #F3795C; display: none">
+                    <div class="container p-4 sample-container" style="border: 1px solid #FFAAA5; display: none">
                          @include('frontend.partials.sample_product')
                     </div>
-                    <div class="container py-4 tukarpoin-container" style="border: 1px solid #F3795C; display: none">
+                    <div class="container py-4 tukarpoin-container" style="border: 1px solid #FFAAA5; display: none">
                         <div class="row">
                             <div class="col-4 text-center">
-                                <p style="font-weight: 700; margin: 0;"><a href="#" onclick="showPointType(1);" style="color: #F3795C;"><u><200 POIN</u></a></p>
+                                <p style="font-weight: 700; margin: 0;"><a href="#" onclick="showPointType(1);" style="color: #FFAAA5;"><u><200 POIN</u></a></p>
                             </div>
                             <div class="col-4 text-center">
                                 <p style="font-weight: 700; margin: 0;"><a href="#" onclick="showPointType(2);" style="color: black;">200-500 POIN</a></p>
@@ -54,8 +53,8 @@
                          @include('frontend.partials.product_point')
 
                     </div>
-                    <div class="rounded my-4" style="border: 1px solid #F3795C;">
-                        <div class="container" style="background-color: #F3795C;">
+                    <div class="rounded my-4" style="border: 1px solid #FFAAA5;">
+                        <div class="container" style="background-color: #FFAAA5;">
                             <h2 class="py-2 m-0 font-weight-bold" style="color: white; font-size: 14px;">BARANG DI KERANJANG BELANJA</h2>
                         </div>
                         @php
@@ -79,7 +78,7 @@
                         // }
                         @endphp
                         <div class="container pt-3 px-4">
-                            <div class="row" style="border-bottom: 1px solid #F3795C;">
+                            <div class="row" style="border-bottom: 1px solid #D1D1D1;">
                                 <div class="col-md-2 col-6 pb-3">
                                     <img src="{{ asset($product->thumbnail_img) }}" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
                                 </div>
@@ -99,11 +98,11 @@
                                             @if($product != null)
                                             @if(home_base_price($product->id) != home_discounted_base_price($product->id))
                                                 <p class="mb-0" style="font-size: 14px;">
-                                                    <s>{{ home_base_price($product->id) }}</s><span style="color: #F3795C;"> ({{ $product->discount }}%)</span>
+                                                    <s>{{ home_base_price($product->id) }}</s><span style="color: #FFAAA5;"> ({{ $product->discount }}%)</span>
                                                 </p>
                                             @endif
                                             @endif
-                                            <p class="font-weight-bold" style="color: #F3795C; font-size: 14px;">{{ single_price($cartItem['price']) }}</p>
+                                            <p class="font-weight-bold" style="color: #FFAAA5; font-size: 14px;">{{ single_price($cartItem['price']) }}</p>
                                         </div>
                                         <div class="col-md-2 col-12 p-0 cart-product-price">
                                             @if($cartItem['digital'] != 1)
@@ -129,7 +128,7 @@
                                         </div>
                                     </div>
                                     <div class="text-right pb-3">
-                                        <a href="#" onclick="removeFromCartView(event, {{ $key }});" type="button"><i class="fa fa-trash-o" aria-hidden="true" style="font-size: 26px; color: #F3795C;"></i></a>
+                                        <a href="#" onclick="removeFromCartView(event, {{ $key }});" type="button"><i class="fa fa-trash-o" aria-hidden="true" style="font-size: 26px; color: #FFAAA5;"></i></a>
                                     </div>
                                 </div>
                             </div>
